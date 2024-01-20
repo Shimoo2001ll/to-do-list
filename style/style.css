@@ -1,0 +1,50 @@
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+         :root {
+            --main-transition: all .8s linear;
+        }
+        /*   global styling */
+        /*  end global styling */
+        /*  main section  */
+        
+        #main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .main-title {
+            letter-spacing: 1.4px;
+            font-weight: 400 !important;
+            font-family: cursive;
+            text-shadow: -2px 0 3px #df7da6, 2px 0 #df7da6;
+            transition: var(--main-transition);
+            background-color: #f7b2cf;
+            color: transparent;
+        }
+        
+        .main-title:hover {
+            padding: 2% !important;
+            font-size: 2em !important;
+        }
+        
+        input {
+            border: none !important;
+            outline: none !important;
+            border-radius: 5px;
+        }
+        /* end main section  */
+        
+        .alert {
+            background-color: #f7b2cf !important;
+            color: #d93f7f !important;
+            text-align: center;
+            padding: 1%;
+            margin: 2%;
+            display: none;
+        }
