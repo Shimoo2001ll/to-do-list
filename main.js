@@ -5,10 +5,10 @@ addbtn.addEventListener('click', (e) => {
         e = taskin.value;
         if (e == '') {
             alertfill()
-            console.log('hi it is empty')
+                // console.log('hi it is empty')
         } else {
             addtasks()
-
+            taskin.value = ''
 
         }
     })
@@ -30,7 +30,10 @@ function addtasks(tasks) {
         document.querySelector('.showTask').appendChild(div)
         div.classList.add('divTask')
         container.classList.add('contain')
-
+            //  delet btn  work
+        btnDelet.addEventListener('click', function() {
+            div.style.display = 'none'
+        })
 
 
     }
