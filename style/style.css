@@ -48,3 +48,42 @@
             margin: 2%;
             display: none;
         }
+        
+        .btndone,
+        .delbtn {
+            background-color: #f7b2cf !important;
+            color: #ffffff !important;
+            text-align: center;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            text-transform: capitalize;
+            padding: 1%;
+            transition: var(--main-transition);
+        }
+        
+        .delbtn:hover {
+            background-color: red !important;
+        }
+        
+        .btndone {
+            background-color: #b2f7bf !important;
+        }
+        
+        .btndone:hover {
+            background-color: gray !important;
+        }
+        
+        .contain {
+            width: 50% !important;
+        }
+        
+        .divTask {
+            padding: 1%;
+            margin: 2%;
+            background-color: white;
+            border-radius: 7px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
