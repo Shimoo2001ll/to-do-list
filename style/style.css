@@ -87,3 +87,19 @@
             justify-content: space-evenly;
             align-items: center;
         }
+        
+        table {
+            width: 100%;
+            /* text-align: center; */
+            text-transform: capitalize;
+        }
+        
+        table tr {
+            margin: 10px;
+            padding: 10px;
+        }
+        
+        table td {
+            margin: 10px;
+            padding: 10px;
+        }
