@@ -73,7 +73,7 @@ addbtn.onclick = function() {
         if (taskin.value != '') {
 
             let task = {
-                id: new Date,
+                his: new Date,
                 title: taskin.value
             }
             tasksarr.push(task)
@@ -104,7 +104,8 @@ function showTasks() {
     let table = ''
     for (let i = 0; i < tasksarr.length; i++) {
         table += `   <tr>
-        <td>${tasksarr[i].id}</td>
+        <td>${i}</td>
+        <td>${tasksarr[i].his}</td>
         <td>${tasksarr[i].title}</td>
         <td>
             <button class="btn delbtn">delete</button>
@@ -115,6 +116,6 @@ function showTasks() {
     document.querySelector('.tableBody').innerHTML = table;
 }
 showTasks()
-btnDelet.addEventListener("click", function() {
-    div.style.display = "none";
-});
+    // btnDelet.addEventListener("click", function() {
+    //     div.style.display = "none";
+    // });
