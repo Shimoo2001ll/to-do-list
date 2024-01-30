@@ -61,7 +61,7 @@ let addbtn = document.querySelector(".btn");
 let alert = document.querySelector(".alert");
 // create the arr of taskes
 let tasksarr;
-if (localStorage.Tskes !== "") {
+if (localStorage.Tskes != null) {
     tasksarr = JSON.parse(localStorage.Tskes)
 
 } else {
@@ -74,7 +74,8 @@ addbtn.onclick = function() {
 
             let task = {
                 his: new Date,
-                title: taskin.value
+                title: taskin.value,
+                done: false,
             }
             tasksarr.push(task)
                 // savew to local storage
@@ -103,12 +104,15 @@ function alertfill() {
 function showTasks() {
     let table = ''
     for (let i = 0; i < tasksarr.length; i++) {
-        table += `   <tr>
+        table += `   <tr class="taskrow">
         <td>${i}</td>
         <td>${tasksarr[i].his}</td>
         <td>${tasksarr[i].title}</td>
         <td>
-            <button class="btn delbtn">delete</button>
+            <button onclick="deleteTask(${i})" class="btn delbtn">delete</button>
+            </td>
+            <td>
+            <button onclick="doneTask(${i})" class="btn btn-success">done</button>
         </td>
     </tr>`
 
@@ -116,6 +120,18 @@ function showTasks() {
     document.querySelector('.tableBody').innerHTML = table;
 }
 showTasks()
-    // btnDelet.addEventListener("click", function() {
-    //     div.style.display = "none";
-    // });
+    //     deletelemnt
+function deleteTask(i) {
+    tasksarr.splice(i, 1);
+    localStorage.Tskes = JSON.stringify(tasksarr)
+
+    showTasks()
+}
+//  done the task
+// function doneTask(i) {
+//     tasksarr[i].done = true
+//     if (tasksarr[i].done == true) {
+
+//         document.querySelector('.taskrow').style.opacity = '.5'
+//     }
+// }
